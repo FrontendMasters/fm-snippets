@@ -86,11 +86,12 @@ simon.greet(); // -> Logs 'hello'
 
 /*** CHALLENGE 2 of 3 ***/
 
-function personFromConstructor(personName, personAge) {
-    let user = new PersonConstructor;
-    PersonConstructor.prototype.name = personName;
-    PersonConstructor.prototype.age = personAge;
-    return user;
+function personFromConstructor(name, age) {
+  let newPerson = new PersonConstructor;
+	newPerson.name = name;
+  newPerson.age = age;
+  
+	return newPerson;
 }
 
 var mike = personFromConstructor('Mike', 30);
