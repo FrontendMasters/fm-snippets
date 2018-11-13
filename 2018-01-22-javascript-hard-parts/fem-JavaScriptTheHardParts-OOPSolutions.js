@@ -7,6 +7,7 @@ function makePerson(personName, personAge) {
     let newPerson = Object.create(null);
     newPerson.name = personName;
     newPerson.age = personAge;
+	
     return newPerson
 }
 
