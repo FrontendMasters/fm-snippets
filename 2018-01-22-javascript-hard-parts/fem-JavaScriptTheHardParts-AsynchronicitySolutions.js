@@ -150,10 +150,12 @@ console.log('End of Challenge 5');
 //CHALLENGE 6//
 console.log('Start of Challenge 6');
 var dataReceived;
+var data; // is undefined at first
 
 function ajaxSimulate(id, callback) {
     var database = ['Aaron', 'Barbara', 'Chris'];
-    setTimeout(callback(database[id]), 0);
+    var data = database[id]
+    setTimeout(callback, 0); 
 }
 
 function storeData(data) {
