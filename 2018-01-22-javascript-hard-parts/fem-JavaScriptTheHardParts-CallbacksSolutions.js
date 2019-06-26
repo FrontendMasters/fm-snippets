@@ -40,7 +40,6 @@ function mapWith(array, callback) {
     });
     return newArr;
 }
-}
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -69,7 +68,7 @@ function intersection(arrays) {
             for (let j = 0; j < arguments[k].length; j++) { //loops through k'th array
                 if (arguments[0][i] === arguments[k][j]) { //checks if the value is the same as in the first array
                     if (!result.includes(arguments[0][i])) { //checks if number is already noted
-                        result.push(arguments[0][i]) //adds the number to our array with elements in all arrays 
+                        result.push(arguments[0][i]) //adds the number to our array with elements in all arrays
                     }
                 }
             }
@@ -83,7 +82,7 @@ console.log(intersection([5, 10, 15, 20], [15, 88, 1, 5, 7], [1, 10, 15, 5, 20])
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-//Extension 4 // 
+//Extension 4 //
 function union(arrays) {
     //note: 'arguments' is a built-in object corresponding, in this case, to what was passed in for arrays
     let result = []
