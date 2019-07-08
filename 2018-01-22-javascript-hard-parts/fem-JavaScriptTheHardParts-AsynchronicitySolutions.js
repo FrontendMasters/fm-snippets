@@ -85,7 +85,7 @@ console.log('Start of Challenge 3');
 // ...your code below
 function everyXsecsForYsecs(callback, interval, totalTime) {
     for (let i = 0; i < totalTime / interval; i++) { //deposits the correct amount of setTimeouts onto the stack 
-        setTimeout(callback, interval * 1000);
+        setTimeout(callback, i * interval * 1000);
     }
 }
 
