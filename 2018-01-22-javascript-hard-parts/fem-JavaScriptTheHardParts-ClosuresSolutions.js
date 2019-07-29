@@ -104,8 +104,10 @@ afterCalled(); // -> 'hello' is printed
 // EXTENSION: CHALLENGE 7 //
 
 function delay(func, wait) {
-    setTimeout(func, wait);
-}
+    var args = Array.from(arguments);
+    if (args.length > 2) { args = args.slice(2, args.length) }
+    setTimeout(function() { func.apply(null,args) }, wait);
+} 
 
 function displayTwo() { console.log(2) };
 delay(displayTwo, 3000); //--> displays 2 after 3000 milliseconds (3 seconds)
