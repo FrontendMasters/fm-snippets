@@ -109,3 +109,27 @@ function delay(func, wait) {
 
 function displayTwo() { console.log(2) };
 delay(displayTwo, 3000); //--> displays 2 after 3000 milliseconds (3 seconds)
+
+
+///////////////////////////////////////////////////////////////////////////
+
+// EXTENSION: CHALLENGE 8 //
+
+function rollCall(names) {
+    let person = names
+    let counter = 0
+    return function () {
+        if (counter < person.length) {
+            console.log(person[counter])
+            counter++
+        } else {
+            console.log('Everyone accounted for!')
+        }
+    }
+}
+// UNCOMMENT THESE TO TEST YOUR WORK!
+const rollCaller = rollCall(['Victoria', 'Juan', 'Ruth'])
+rollCaller() // -> Should log 'Victoria'
+rollCaller() // -> Should log 'Juan'
+rollCaller() // -> Should log 'Ruth'
+rollCaller() // -> Should log 'Everyone accounted for'
