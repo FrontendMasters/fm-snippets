@@ -1,6 +1,8 @@
 # Full Stack for Front-End Engineers, v3 Reference Guide
 
-This document is a reference guide for the [Full Stack for Front-End Engineers, v3](https://frontendmasters.com/courses/fullstack-v2/) course on [Frontend Masters](https://frontendmasters.com/). The instructions/commands correspond with the lessons in the course.
+This document is a reference guide for the [Full Stack for Front-End Engineers, v3](https://frontendmasters.com/courses/fullstack-v3/) course on [Frontend Masters](https://frontendmasters.com/). 
+
+More code and instructions can be found in [the slides](https://static.frontendmasters.com/assets/courses/2023-04-18-fullstack-v3/fullstack-v3-slides.pdf).
 
 ### Create SSH Key (name it fsfe)
 ```bash
@@ -144,3 +146,61 @@ pm2 save
 pm2 startup
 # copy command that is generated and run it
 ```
+
+### Setup GitHub SSH Keys
+```bash
+# Ensure git uses your new ssh keys
+vi ~/.ssh/config 
+```
+
+Add host info to config file
+```
+Host github.com
+  Hostname github.com
+  IdentiyFile ~/.ssh/gh_key
+```
+
+### change permissions to 600
+```bash
+chmod 600 ~/.ssh/config
+chmod 600 ~/.ssh/gh_key
+```
+
+### nmap
+```bash
+sudo apt install nmap
+nmap <your_server_ip>
+nmap -sV <your_server_ip>
+```
+
+### ufw
+```bash
+sudo ufw status
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw enable
+```
+
+### Application Updates
+```bash
+sudo apt install unattended-upgrades
+sudo dpkg-reconfigure --priority=low unattended-upgrades
+```
+
+### Find
+```bash
+find /var/log -type f -name "*.log"
+find / -type d -name log
+```
+
+### Install sqlite3
+```bash
+npm install sqlite3
+```
+
+### Update nginx server with http2
+```bash
+sudo vi /etc/nginx/sites-enabled/fsfe
+# listen 443 http2 ssl;
+```
+
