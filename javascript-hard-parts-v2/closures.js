@@ -396,8 +396,11 @@ function makeHistory(limit) {
       }
       return `${history.pop()} undone`;
     } 
+    if (history.length === limit) {
+      history.shift();
+    }
     
-    history.push(str)
+    history.push(str);
     return `${str} done`
     
   }
