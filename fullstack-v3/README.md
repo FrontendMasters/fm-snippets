@@ -157,7 +157,7 @@ Add host info to config file
 ```
 Host github.com
   Hostname github.com
-  IdentiyFile ~/.ssh/gh_key
+  IdentiytFile ~/.ssh/gh_key
 ```
 
 ### change permissions to 600
