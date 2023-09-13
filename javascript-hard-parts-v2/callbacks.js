@@ -36,11 +36,9 @@ function map(array, callback) {
 
 // Challenge 4
 function forEach(array, callback) {
-	let arr = []
-  for(let i=0; i<array.length; i++) {
-    arr.push(callback(array[i]))
+  for (let i = 0; i < array.length; i++) {
+    callback(array[i]);
   }
-	return arr
 }
 
 // see for yourself if your forEach works!
