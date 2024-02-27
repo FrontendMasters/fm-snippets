@@ -40,7 +40,6 @@ function forEach(array, callback) {
   for(let i=0; i<array.length; i++) {
     arr.push(callback(array[i]))
   }
-	return arr
 }
 
 // see for yourself if your forEach works!
