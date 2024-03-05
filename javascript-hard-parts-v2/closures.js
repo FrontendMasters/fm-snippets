@@ -432,6 +432,10 @@ function blackjack(array) {
     let busted = false;
     
     function player(){
+     if(busted){
+        return "you are done!"
+      }
+  
       if(!playerSum){
         playerSum = num1 + num2;
         return playerSum;
@@ -442,10 +446,6 @@ function blackjack(array) {
         index++;
         return playerSum;
       } 
-      
-      if(busted){
-        return "you are done!"
-      }
       
       busted = true;
       index++;
