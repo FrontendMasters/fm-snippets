@@ -189,14 +189,16 @@ function prioritize(array, callback) {
 
 // Challenge 14
 function countBy(array, callback) {
-  let result = {};
-  let odd = 0;
-  let even = 0;
-  for (let num of array) {
-    let key = callback(num);
-    key === "odd" ? (result[key] = ++odd) : (result[key] = ++even);
+  let result = {}
+  for(let i = 0; i< array.length; i++) {
+    const value = callback(array[i])
+    if(value in result) {
+      result[value] += 1 
+    } else {
+      result[value] = 1 
+    }
   }
-  return result;
+  return result      
 }
 
 // /*** Uncomment these to check your work! ***/
