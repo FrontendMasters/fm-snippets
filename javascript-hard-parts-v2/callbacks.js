@@ -54,9 +54,9 @@ console.log(alphabet);   //prints 'abcd'
 
 // Challenge 5
 function mapWith(array, callback) {
-    const arr = []
-	forEach(array, elem => arr.push(callback(elem)))
-    return arr
+  const arr = []
+  forEach(array, elem => arr.push(callback(elem)))
+  return arr
 }
 
 
