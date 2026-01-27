@@ -1,0 +1,10 @@
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+Thumbs.db
+
+# NPM packages folder
+node_modules/
