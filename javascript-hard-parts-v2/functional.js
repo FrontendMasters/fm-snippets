@@ -211,7 +211,23 @@ const addTwo = (num) => {
   
   
   
-  
+  module.exports = {
+    addTwo,
+    addS,
+    map,
+    forEach,
+    mapWith,
+    reduce,
+    intersection,
+    union,
+    objOfMatches,
+    multiMap,
+    commutative,
+    objFilter,
+    rating,
+    pipe,
+    highestFunc,
+  };
   
   
   

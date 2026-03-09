@@ -1,0 +1,15 @@
+{
+  "name": "javascript-hard-parts-v2",
+  "version": "1.0.0",
+  "description": "Pair programming solutions for the [JavaScript: The Hard Parts, v2](https://frontendmasters.com/courses/javascript-hard-parts-v2/) course on [Frontend Masters](https://frontendmasters.com/).",
+  "main": "async.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.1"
+  }
+}
